@@ -5,9 +5,11 @@ window.addEventListener('load', function(){
     
     ham.addEventListener('click', function () { //ハンバーガーメニューをクリックしたら
         ham.classList.toggle('active'); // ハンバーガーメニューにactiveクラスを付け外し
-        nav.classList.toggle('active'); // ナビゲーションメニューにactiveクラスを付け外し
-        console.log(ham , nav);
+        console.log(ham);
     });
+
+    // nav.classList.toggle('active'); 
+    // ナビゲーションメニューにactiveクラスを付け外し スクロールが既定の位置に来たら表示
 
     
 });
