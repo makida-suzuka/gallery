@@ -19,14 +19,31 @@ window.addEventListener('load', function(){
         const infoSection = document.querySelector('#information');
         //headerを取得(アクティブclassを付けるため)
         const header = this.document.querySelector('#header');
-    
-        const distanceToBox = infoSection.offsetTop;
+        //インフォメーションセクションの高さを取得する
+        const distanceToInfo = infoSection.offsetTop;
             // 下記条件が成り立つときだけheaderにactiveクラスを付与する
-        if(scroll + windowHeight > distanceToBox) {
+        if(scroll + windowHeight > distanceToInfo) {
             header.classList.add('active');
         }
 
+        //ギャラリーセクションの取得
+        const gallerySection = document.querySelector('#gallery');
+        //side-btn取得
+        const sideBtn = document.querySelector('#side-btn');
+        //ギャラリーセクションの高さを取得する
+        const distanceToGallery = gallerySection.offsetTop;
+        // 下記条件が成り立つときだけheaderにactiveクラスを付与する
+        if(scroll + windowHeight > distanceToGallery) {
+            sideBtn.classList.add('active');
+        }
         
+        //メインビジュアルのアップ・クローズ
+        //ビジュアルの大きさ＋スクロール量
+        let sum = 1 + scroll / 50;
+        //ビジュアル取得
+        const visual = document.querySelector('#mainvisual');
+        //ビジュアルにスクロール量を足す
+        // visual.style.transform = "scale(" + sum + ")";
 
     });
 

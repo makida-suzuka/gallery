@@ -29,7 +29,6 @@ body{
 #header{
     position: fixed;
     width: 100%;
-    /* background-color: aqua; */
     height: 100px;
     box-sizing: border-box;
     visibility: hidden;
@@ -122,12 +121,16 @@ body{
 
 #side-btn{
     position: fixed;
-    bottom: 400px;
-    right: 0px;
-    transform: rotate(270deg);
+    transform: rotate(-90deg) translateY(60px);
     transform-origin: right bottom;/*transformの回転の基準点を右下に変更*/
     border:#fff 1px solid;
     padding: 15px 30px;
+    transition: 0.3s ease-in-out;
+}
+#side-btn.active{
+    transform: rotate(-90deg);
+    bottom: 400px;
+    right: 0px;
 }
 .side-1,.side-2{
     font-size: 0.8rem;
