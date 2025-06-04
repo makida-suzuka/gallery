@@ -5,11 +5,31 @@ window.addEventListener('load', function(){
     
     ham.addEventListener('click', function () { //ハンバーガーメニューをクリックしたら
         ham.classList.toggle('active'); // ハンバーガーメニューにactiveクラスを付け外し
+        nav.classList.toggle('active');
         console.log(ham);
     });
 
-    // nav.classList.toggle('active'); 
-    // ナビゲーションメニューにactiveクラスを付け外し スクロールが既定の位置に来たら表示
+    //スクロールイベント
+    window.addEventListener('scroll', function(){
+        // スクロール量を取得
+        const scroll = window.scrollY;
+        // 画面の高さを取得
+        const windowHeight = window.innerHeight;
+        //インフォメーションセクションを取得(高さを取得するため)
+        const infoSection = document.querySelector('#information');
+        //headerを取得(アクティブclassを付けるため)
+        const header = this.document.querySelector('#header');
+    
+        const distanceToBox = infoSection.offsetTop;
+            // 下記条件が成り立つときだけheaderにactiveクラスを付与する
+        if(scroll + windowHeight > distanceToBox) {
+            header.classList.add('active');
+        }
+
+        
+
+    });
+
 
     
 });
