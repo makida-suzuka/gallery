@@ -79,11 +79,24 @@ window.addEventListener('load', function(){
         //ACCESSセクションの取得
         const accessSection = this.document.querySelector('#access');
         const distanceToAccess = accessSection.offsetTop;
-        if(scroll + windowHeight > distanceToAccess){
-            accessSection.classList.add('back');
+        const accessHeight = accessSection.offsetHeight;
+        const contactSection = this.document.querySelector('#contact');
+        const bg = document.querySelector('.bg');
+
+        if (scrollBottom > distanceToAccess && scroll < distanceToAccess + accessHeight) {
+            bg.classList.add('back');
+        } 
+            // コンタクトセクションに入ったら背景を非表示
+        else if (scroll >= contactSection) {
+            bg.classList.remove('back');
+        } 
+            // どちらにも該当しないときは背景を非表示に
+        else {
+            bg.classList.remove('back');
         }
-
-
     });
+
+    //スムーススクロール
+    
 
 });
