@@ -46,8 +46,8 @@ body{
     width: 140px;
     z-index: 400;
     position: fixed;
-    top: 25px;
-    left: 40px;
+    top: 35px;
+    left: 30px;
 }
 
 /*navigation*/
@@ -78,8 +78,8 @@ body{
 /*ハンバーガーメニュー*/
 .hamburger-button{
     position: fixed;
-    top: 25px;
-    right: 40px;
+    top: 20px;
+    right: 25px;
     height: 50px;
     width: 50px;
     text-align: center;
@@ -350,9 +350,8 @@ footer{
 /*SP*/
 @media (max-width:900px){
     #mainvisual{
-    display: flex;
-    position: relative; 
-    z-index: -1;
+        justify-content: center;
+        overflow-x: hidden;
     }
     #mainvisual img{
         width: 100%;
@@ -422,5 +421,9 @@ footer{
         display: block;
         padding: 60px 30px;
     }
+    #side-btn{
+        display: none;
+    }
+
 
 }

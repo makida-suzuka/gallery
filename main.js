@@ -60,9 +60,9 @@ window.addEventListener('load', function(){
         const visual = document.querySelector('#mainvisual');
         //ビジュアルにスクロール量を足す
         // visual.style.transform = "scale(" + sum + ")";
-          // 拡大率に上限を設ける（例: 最大1.5倍）
+          // 拡大率に上限を設ける（例: 最大3倍）
         let scale = 1 + scroll / 300;
-        if (scale > 3) scale = 3;
+        if (scale > 2.8) scale = 2.8;
 
   visual.style.transform = `scale(${scale})`;
 
