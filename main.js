@@ -45,6 +45,18 @@ window.addEventListener('load', function(){
         //ビジュアルにスクロール量を足す
         // visual.style.transform = "scale(" + sum + ")";
 
+        //各ブロックの取得
+        const boxes = this.document.querySelectorAll('.box');
+        
+        boxes.forEach(function(box){
+            const distanceToBoxes = box.offsetTop;
+            if(scroll + windowHeight > distanceToBoxes) {
+                box.classList.add('active');
+            }           
+            });
+      
+
+
     });
 
 
