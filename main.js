@@ -55,11 +55,16 @@ window.addEventListener('load', function(){
         
         //メインビジュアルのアップ・クローズ
         //ビジュアルの大きさ＋スクロール量
-        let sum = 1 + scroll / 50;
+        // let sum = 1 + scroll / 50;
         //ビジュアル取得
         const visual = document.querySelector('#mainvisual');
         //ビジュアルにスクロール量を足す
         // visual.style.transform = "scale(" + sum + ")";
+          // 拡大率に上限を設ける（例: 最大1.5倍）
+        let scale = 1 + scroll / 300;
+        if (scale > 3) scale = 3;
+
+  visual.style.transform = `scale(${scale})`;
 
         //各ブロックの取得
         const boxes = this.document.querySelectorAll('.box');
