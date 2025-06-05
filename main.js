@@ -15,26 +15,42 @@ window.addEventListener('load', function(){
         const scroll = window.scrollY;
         // 画面の高さを取得
         const windowHeight = window.innerHeight;
-        //インフォメーションセクションを取得(高さを取得するため)
+
+
+        //基準となるセクションを取得(高さを取得するため)
         const infoSection = document.querySelector('#information');
-        //headerを取得(アクティブclassを付けるため)
+        const gallerySection = document.querySelector('#gallery');
+        const footer = document.querySelector('footer');
+
+
+        //表示させるheader・サイドボタンを取得
         const header = this.document.querySelector('#header');
-        //インフォメーションセクションの高さを取得する
-        const distanceToInfo = infoSection.offsetTop;
-            // 下記条件が成り立つときだけheaderにactiveクラスを付与する
-        if(scroll + windowHeight > distanceToInfo) {
+        const sideBtn = document.querySelector('#side-btn');
+
+        //それぞれのトップの位置、galleryの高さ
+        const infoTop = infoSection.offsetTop;
+        const footerTop = footer.offsetTop;
+        const galleryTop = gallerySection.offsetTop;
+        const galleryHeight = gallerySection.offsetHeight;
+
+        //スクロール量＋画面の高さ
+        const scrollBottom = scroll + windowHeight;
+
+
+        // ヘッダーの表示条件：#information ～ #footer の間のみ
+        if (scrollBottom > infoTop && scroll < footerTop) {
             header.classList.add('active');
+        } else {
+            header.classList.remove('active');
         }
 
-        //ギャラリーセクションの取得
-        const gallerySection = document.querySelector('#gallery');
-        //side-btn取得
-        const sideBtn = document.querySelector('#side-btn');
-        //ギャラリーセクションの高さを取得する
-        const distanceToGallery = gallerySection.offsetTop;
-        // 下記条件が成り立つときだけheaderにactiveクラスを付与する
-        if(scroll + windowHeight > distanceToGallery) {
+        // サイドボタンの表示条件：#gallery の範囲内のみ
+        if (scrollBottom > galleryTop && scroll < galleryTop + galleryHeight) {
             sideBtn.classList.add('active');
+            sideBtn.classList.remove('fade-out');
+        } else {
+            sideBtn.classList.remove('active');
+            sideBtn.classList.add('fade-out');
         }
         
         //メインビジュアルのアップ・クローズ
@@ -54,11 +70,15 @@ window.addEventListener('load', function(){
                 box.classList.add('active');
             }           
             });
-      
+        
+        //ACCESSセクションの取得
+        const accessSection = this.document.querySelector('#access');
+        const distanceToAccess = accessSection.offsetTop;
+        if(scroll + windowHeight > distanceToAccess){
+            accessSection.classList.add('back');
+        }
 
 
     });
 
-
-    
 });

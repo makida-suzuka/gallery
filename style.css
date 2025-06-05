@@ -125,10 +125,18 @@ body{
     transform-origin: right bottom;/*transformの回転の基準点を右下に変更*/
     border:#fff 1px solid;
     padding: 15px 30px;
-    transition: 0.3s ease-in-out;
+    transition:transform 0.6s ease-in-out, opacity 0.6s ease;
+    opacity: 0;
 }
 #side-btn.active{
-    transform: rotate(-90deg);
+    transform: rotate(-90deg) translateY(0);
+    bottom: 400px;
+    right: 0px;
+    opacity: 1;
+}
+#side-btn.fade-out{
+    transform: rotate(-90deg) translateY(60px);
+    opacity: 0;
     bottom: 400px;
     right: 0px;
 }
