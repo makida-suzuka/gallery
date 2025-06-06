@@ -3,6 +3,7 @@
 html{
     font-size: 100%;
     font-family: "Source Sans 3", sans-serif;
+    overflow-x: hidden;
 }
 li{
     list-style: none;
@@ -24,6 +25,7 @@ body{
     display: flex;
     position: relative; 
     z-index: -1;
+    transform-origin: center center;
 }
 #mainvisual img{
     width: calc(100% / 3);
