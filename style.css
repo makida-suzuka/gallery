@@ -29,6 +29,9 @@ body{
 }
 #mainvisual img{
     width: calc(100% / 3);
+    flex-shrink: 0;
+    object-fit: cover;
+    height: 100vh;
 }
 #header{
     position: fixed;
@@ -353,7 +356,7 @@ footer{
 @media (max-width:900px){
     #mainvisual{
         justify-content: center;
-        overflow-x: hidden;
+        /* overflow-x: hidden; */
     }
     #mainvisual img{
         width: 100%;

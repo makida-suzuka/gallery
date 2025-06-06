@@ -62,17 +62,22 @@ window.addEventListener('load', function(){
         }
         
         //メインビジュアルのアップ・クローズ
-        //ビジュアルの大きさ＋スクロール量
-        // let sum = 1 + scroll / 50;
+
         //ビジュアル取得
         const visual = document.querySelector('#mainvisual');
-        //ビジュアルにスクロール量を足す
-        // visual.style.transform = "scale(" + sum + ")";
-          // 拡大率に上限を設ける（例: 最大3倍）
-        let scale = 1 + scroll / 300;
-        if (scale > 2.8) scale = 2.8;
+        //レスポンシブ対応
+        //PC 徐々に大きく
+        if(window.innerWidth > 900){
+            let scale = 1 + scroll / 300;
+            if (scale > 2.8) scale = 2.8;
+            visual.style.transform = `scale(${scale})`;
+        }else{
+            //PC 徐々に小さく
+            let scale = 1 - scroll / 800;
+            if (scale > 1.2) scale = 1.2;
+            visual.style.transform = `scale(${scale})`;            
+        }
 
-  visual.style.transform = `scale(${scale})`;
 
         //各ブロックの取得
         const boxes = this.document.querySelectorAll('.box');
@@ -121,3 +126,5 @@ window.addEventListener('load', function(){
   });
 
 });
+
+
