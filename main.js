@@ -9,6 +9,14 @@ window.addEventListener('load', function(){
         console.log(ham);
     });
 
+    //ナビのページ内リンクをクリックした時に、ナビを閉じる
+    const naviLinks = this.document.querySelectorAll('.navi-link');
+        naviLinks.forEach(function(link){
+            link.addEventListener('click',()=>{
+                nav.classList.remove('active');
+            })
+        });
+
     //スクロールイベント
     window.addEventListener('scroll', function(){
         // スクロール量を取得
