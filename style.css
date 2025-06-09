@@ -83,8 +83,8 @@ body{
 /*ハンバーガーメニュー*/
 .hamburger-button{
     position: fixed;
-    top: 20px;
-    right: 25px;
+    top: 15px;
+    right: 20px;
     height: 50px;
     width: 50px;
     text-align: center;
@@ -140,7 +140,7 @@ body{
     transform: rotate(-90deg) translateY(0);
     bottom: 400px;
     right: 0px;
-    opacity: 1;
+    opacity: 0.9;
 }
 #side-btn.fade-out{
     transform: rotate(-90deg) translateY(60px);
@@ -150,7 +150,7 @@ body{
 }
 .side-1,.side-2{
     font-size: 0.8rem;
-    transition: 0.3s ease-in-out;;
+    transition: 0.3s ease-in-out;
 }
 .side-1:hover,.side-2:hover{
     opacity: 0.7;
