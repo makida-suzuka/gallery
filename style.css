@@ -169,8 +169,9 @@ h1{
     font-size: 6.5rem;
     margin: 0 auto;
     font-weight: 300;
-    padding: 80px 0;
+    padding: 100px 0;
     background-color: #000000;
+    line-height: 8rem;
 }
 /* フェードイン要素 */
 .box{
@@ -185,11 +186,17 @@ h1{
     opacity: 1;
     transform: translateY(0);
 }
+h2{
+    margin: 0;
+}
 .sec-title{
     display: inline-block;
-    font-size: 3.5rem;
+    font-size: 3.75rem;
     font-weight: 300;
     border-bottom: #fff 1px solid;
+    letter-spacing: 0.03rem;
+    margin-bottom: 45px;
+    line-height: 75px;
 }
 
 #information{
@@ -198,12 +205,12 @@ h1{
     margin-bottom: 100px;
 }
 #information p{
-    font-size: 1.2rem;
+    font-size: 1.125rem;
     font-weight: 300;
     margin: 10px 0;
 }
 #information .date{
-    font-size: 1.8rem;
+    font-size: 1.5rem;
 }
 #information .place{
     font-size: 2.5rem;
@@ -364,9 +371,11 @@ footer{
     }
     h1{
         font-size: 3rem;
+        line-height: normal;
     }
     .sec-title{
         font-size: 2rem;
+        line-height: 40px;
     }
     #information{
         background-color: #000000;
