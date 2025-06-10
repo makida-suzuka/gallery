@@ -177,7 +177,6 @@ h1{
     font-weight: 300;
     padding: 100px 0;
     background-color: #000000;
-    line-height: 8rem;
 }
 /* フェードイン要素 */
 .box{
@@ -192,17 +191,12 @@ h1{
     opacity: 1;
     transform: translateY(0);
 }
-h2{
-    margin: 0;
-}
 .sec-title{
     display: inline-block;
     font-size: 3.75rem;
     font-weight: 300;
     border-bottom: #fff 1px solid;
-    letter-spacing: 0.03rem;
     margin-bottom: 45px;
-    line-height: 75px;
 }
 
 #information{
@@ -377,11 +371,9 @@ footer{
     }
     h1{
         font-size: 3rem;
-        line-height: normal;
     }
     .sec-title{
         font-size: 2rem;
-        line-height: 40px;
     }
     #information{
         background-color: #000000;
