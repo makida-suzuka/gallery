@@ -3,6 +3,7 @@
 html{
     font-size: 100%;
     font-family: "Source Sans 3", sans-serif;
+    font-weight: 300;
     overflow-x: hidden;
 }
 li{
@@ -171,12 +172,12 @@ a.navi-link{
 
 h1{
     text-align: center;
-    font-size: 6.5rem;
+    font-size: 6.25rem;
+    letter-spacing: 0.03em;
     margin: 0 auto;
     font-weight: 300;
     padding: 100px 0;
     background-color: #000000;
-    line-height: 8rem;
 }
 /* フェードイン要素 */
 .box{
@@ -199,9 +200,7 @@ h2{
     font-size: 3.75rem;
     font-weight: 300;
     border-bottom: #fff 1px solid;
-    letter-spacing: 0.03rem;
     margin-bottom: 45px;
-    line-height: 75px;
 }
 
 #information{
@@ -211,13 +210,13 @@ h2{
 }
 #information p{
     font-size: 1.125rem;
-    font-weight: 300;
     margin: 10px 0;
 }
 #information .date{
     font-size: 1.5rem;
 }
 #information .place{
+    margin: 20px 0;
     font-size: 2.5rem;
     font-weight: 400;
 }
@@ -252,7 +251,7 @@ h2{
 }
 #access .place{
     margin-top: 0;
-    font-size: 2.0rem;
+    font-size: 1.75rem;
     font-weight: 400;
 }
 .bg{
@@ -274,7 +273,7 @@ h2{
 .google-map{
     display: block;
     margin: 0 auto;
-    margin-top: 50px;
+    margin-top: 30px;
     padding: 15px;
     width: 200px;
     border: #fff  solid 1px;
@@ -376,11 +375,9 @@ footer{
     }
     h1{
         font-size: 3rem;
-        line-height: normal;
     }
     .sec-title{
         font-size: 2rem;
-        line-height: 40px;
     }
     #information{
         background-color: #000000;
@@ -424,8 +421,11 @@ footer{
     }
     #access .place{
         margin-top: 0;
-        font-size: 2.0rem;
+        font-size: 1.75rem;
         font-weight: 400;
+    }
+    #access p{
+        font-size: 1rem;
     }
     #contact a{
     width: 300px;
