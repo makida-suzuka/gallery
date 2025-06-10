@@ -68,12 +68,16 @@ body{
 }
 .navi-menu{
     padding: 0;
+    margin: 0;
 }
 .navi-menu li{
     padding: 10px 0 10px 0;
 }
-.navi-menu li a {
+a.navi-link{
+    font-weight: 300;
     color: #fff;
+    font-size: 1rem;
+    letter-spacing: 0.03rem;
 }
 
 #navi.active{
@@ -132,7 +136,7 @@ body{
     transform: rotate(-90deg) translateY(60px);
     transform-origin: right bottom;/*transformの回転の基準点を右下に変更*/
     border:#fff 1px solid;
-    padding: 15px 30px;
+    padding: 17px 30px;
     transition:transform 0.6s ease-in-out, opacity 0.6s ease;
     opacity: 0;
 }
@@ -140,7 +144,7 @@ body{
     transform: rotate(-90deg) translateY(0);
     bottom: 400px;
     right: 0px;
-    opacity: 0.9;
+    opacity: 0.8;
 }
 #side-btn.fade-out{
     transform: rotate(-90deg) translateY(60px);
@@ -149,11 +153,12 @@ body{
     right: 0px;
 }
 .side-1,.side-2{
-    font-size: 0.8rem;
+    font-size: 0.875rem;
     transition: 0.3s ease-in-out;
+    letter-spacing: 0.1em;
 }
 .side-1:hover,.side-2:hover{
-    opacity: 0.7;
+    opacity: 0.6;
 }
 .side-2{
     padding-left: 20px;
@@ -214,7 +219,7 @@ h2{
 }
 #information .place{
     font-size: 2.5rem;
-    font-weight: 500;
+    font-weight: 400;
 }
 
 #gallery{
