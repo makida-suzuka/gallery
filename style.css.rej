@@ -1,0 +1,13 @@
+diff a/style.css b/style.css	(rejected hunks)
+@@ -371,9 +371,11 @@
+     }
+     h1{
+         font-size: 3rem;
++        line-height: normal;
+     }
+     .sec-title{
+         font-size: 2rem;
++        line-height: 40px;
+     }
+     #information{
+         background-color: #000000;
