@@ -199,6 +199,9 @@ h1{
     border-bottom: #fff 1px solid;
     margin-bottom: 45px;
 }
+h2{
+    margin: 0;
+}
 
 #information{
     background-color: #000000;
