@@ -172,7 +172,8 @@ a.navi-link{
 
 h1{
     text-align: center;
-    font-size: 6.5rem;
+    font-size: 6.25rem;
+    letter-spacing: 0.03em;
     margin: 0 auto;
     font-weight: 300;
     padding: 100px 0;
@@ -190,6 +191,9 @@ h1{
     visibility: visible;
     opacity: 1;
     transform: translateY(0);
+}
+h2{
+    margin: 0;
 }
 .sec-title{
     display: inline-block;
@@ -269,7 +273,7 @@ h1{
 .google-map{
     display: block;
     margin: 0 auto;
-    margin-top: 50px;
+    margin-top: 30px;
     padding: 15px;
     width: 200px;
     border: #fff  solid 1px;
