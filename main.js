@@ -91,22 +91,43 @@ window.addEventListener('load', function(){
         
         //ACCESSセクションの取得
         const accessSection = this.document.querySelector('#access');
-        const distanceToAccess = accessSection.offsetTop;
-        const accessHeight = accessSection.offsetHeight;
-        const contactSection = this.document.querySelector('#contact');
-        const bg = document.querySelector('.bg');
+        // const distanceToAccess = accessSection.offsetTop;
+        // const accessHeight = accessSection.offsetHeight;
 
+        const contactSection = this.document.querySelector('#contact');
+        // const distanceToContact = contactSection.offsetTop;
+        // const contactHeight = contactSection.offsetHeight;
+
+        const bg = document.querySelector('.bg');
+        
+        /*
         if (scrollBottom > distanceToAccess && scroll < distanceToAccess + accessHeight) {
             bg.classList.add('back');
         } 
             // コンタクトセクションに入ったら背景を非表示
-        else if (scroll >= contactSection) {
+        else if (scrollBottom > distanceToContact) {
             bg.classList.remove('back');
+            console.log('contact');
+            
         } 
             // どちらにも該当しないときは背景を非表示に
         else {
             bg.classList.remove('back');
+            console.log('else');
         }
+        */
+
+            const accessRect = accessSection.getBoundingClientRect();
+            const contactRect = contactSection.getBoundingClientRect();
+
+            const isAccessVisible = accessRect.top < windowHeight && accessRect.bottom > 0;
+            const isContactVisible = contactRect.top < windowHeight && contactRect.bottom > 0;
+
+            if (isAccessVisible && !isContactVisible) {
+                bg.classList.add('back');
+            } else {
+                bg.classList.remove('back');
+            }
     });
 
     //スムーススクロール
